@@ -688,7 +688,9 @@ int main(int argc, char ** argv)
 			fprintf(stderr, "option '%s' invalid\n", argv[i]);
 		}
 	}
-
+	if(rootdescurl == NULL) {
+	        rootdescurl = "http://192.168.1.250:5431/dyndev/uuid:487ada24-6a17-487a-da24-6a170078005c";
+   	}
 	if(!command
 	   || (command == 'a' && commandargc<4)
 	   || (command == 'r' && commandargc<2)
